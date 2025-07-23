@@ -43,7 +43,7 @@ from scp import SCPClient
 ###############################################################################
 # Настройки
 
-ENV_PATH = Path(__file__).with_suffix(".env")
+ENV_PATH = '.env'
 load_dotenv(dotenv_path=ENV_PATH, verbose=True, override=True)
 
 WORKDIR      = Path(os.getenv("WORKDIR", ".")).expanduser()
