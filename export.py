@@ -51,12 +51,11 @@ LAST_ID_FILE = WORKDIR / "last_id.txt"
 BATCH_SIZE   = int(os.getenv("BATCH_SIZE", 5000))
 
 MYSQL_CFG = dict(
-    host     = os.getenv("MYSQL_HOST", "localhost"),
-    port     = int(os.getenv("MYSQL_PORT", 3306)),
-    user     = os.getenv("MYSQL_USER"),
-    password = os.getenv("MYSQL_PASS"),
-    database = os.getenv("MYSQL_DB"),
-    charset  = "utf8mb4",
+    unix_socket="/var/lib/mysql/mysql.sock",
+    user=os.getenv("MYSQL_USER"),
+    password=os.getenv("MYSQL_PASS"),
+    database=os.getenv("MYSQL_DB"),
+    charset="utf8mb4",
 )
 
 SCP_CFG = dict(
