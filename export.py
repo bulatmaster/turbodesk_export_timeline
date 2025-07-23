@@ -51,7 +51,7 @@ LAST_ID_FILE = WORKDIR / "last_id.txt"
 BATCH_SIZE   = int(os.getenv("BATCH_SIZE", 5000))
 
 MYSQL_CFG = dict(
-    unix_socket="/var/lib/mysql/mysql.sock",
+    unix_socket="/var/lib/mysql/mysqld.sock",
     user=os.getenv("MYSQL_USER"),
     password=os.getenv("MYSQL_PASS"),
     database=os.getenv("MYSQL_DB"),
